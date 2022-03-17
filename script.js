@@ -1,4 +1,7 @@
 String.prototype.shuffle = function (n) {
+  if (n < 8) {
+    return this;
+  }
   let arr = this.split(""),
     char = " ";
 
@@ -15,8 +18,11 @@ function generate(value) {
   let text = textarea.value;
   let key = input.value;
   let output = document.getElementById("output_textareaID");
+  console.log(text.length / 5, "val");
   if (value) {
-    output.value = CryptoJS.AES.encrypt(text, key).toString().shuffle(100);
+    output.value = CryptoJS.AES.encrypt(text, key)
+      .toString()
+      .shuffle(Math.round(text.length / 5));
   } else {
     let bytes = CryptoJS.AES.decrypt(text.replace(/ /g, ""), key);
     output.value = bytes.toString(CryptoJS.enc.Utf8);
