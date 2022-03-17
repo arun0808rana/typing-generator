@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>KEY</h2>
+    <input
+      type="text"
+      id="inputID"
+      autocomplete="off"
+      style="height: 50px; width: 820px"
+    />
+    <h2>Input</h2>
+    <textarea name="" id="textareaID" cols="100" rows="10"></textarea>
+
+    <hr />
+    <h2>Output</h2>
+    <textarea name="" id="output_textareaID" cols="100" rows="20"></textarea>
+    <hr />
+    <button
+      style="height: 60px; width: 200px; margin: 1rem; cursor: pointer"
+      onclick="generate(true)"
+    >
+      Generate Encrypted
+    </button>
+
+    <button
+      style="height: 60px; width: 200px; margin: 1rem; cursor: pointer"
+      onclick="generate(false)"
+    >
+      Generate Decrypted
+    </button>
+
+    <!-- <button
+    style="height: 60px; width: 200px; margin: 1rem; cursor: pointer"
+    onclick="downloadGenerated()"
+  >
+    Download Generated
+  </button> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
